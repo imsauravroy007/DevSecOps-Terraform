@@ -33,9 +33,9 @@ jobs:
  
       - name: Print a message
         run: echo ${{ secrets.SNYK_TOKEN }}
-        # env:
+       env:
           # This is where you will need to introduce the Snyk API token created with your Snyk account
-        #  SNYK_TOKEN: ${{ secrets.SNYK_TOKEN }}
+        SNYK_TOKEN: ${{ secrets.SNYK_TOKEN }}
         
         # Runs Snyk Code (SAST) analysis and uploads result into GitHub.
         # Use || true to not fail the pipeline
