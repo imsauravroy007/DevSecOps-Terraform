@@ -15,4 +15,4 @@ jobs:
    needs: build
    steps:
     - name: hello-step1
-      run: echo "hello test!"
+      run: echo "hello ${{ vars.MY_NAME}}"
